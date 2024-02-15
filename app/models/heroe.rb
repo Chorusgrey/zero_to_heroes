@@ -1,5 +1,5 @@
 class Heroe < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, class_name: "User"
   has_many :bookings, dependent: :destroy
   has_one_attached :photo
   validates :name, presence: true
