@@ -18,7 +18,7 @@ class HeroesController < ApplicationController
   private
 
   def heroe_params
-    params.require(:heroe).permit(:name, :description, :address, :available, :price_per_day)
+    params.require(:heroe).permit(:name, :description, :address, :available, :price_per_day, :photo)
   end
 
   def set_heroe
