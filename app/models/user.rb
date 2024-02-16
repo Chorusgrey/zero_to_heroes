@@ -10,5 +10,5 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  has_one_attached :photo
+  has_many_attached :photos
 end

@@ -1,7 +1,7 @@
 class Heroe < ApplicationRecord
   belongs_to :user, class_name: "User"
   has_many :bookings, dependent: :destroy
-  has_one_attached :photo
+  has_many_attached :photos
   validates :name, presence: true
   validates :description, presence: true
   validates :available, inclusion: { in: [true, false] }
