@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="cards">
+            <h1>Heroes</h1>
+            <% @heroes.each do |heroe| %>
+          <li><%= cl_image_tag "iron_man", alt: "#{heroe.name}", width: 400, height: 300, crop: :fill %>
+            <%= heroe.name %> - <%= heroe.description %></li>
+          <% end %>
+          </div>
+        </div>
+    </div>
+</div>
