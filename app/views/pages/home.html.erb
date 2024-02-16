@@ -12,7 +12,7 @@
 
   <div class="container">
       <div class="cards">
-          <% @heroes.each do |heroe| %>
+          <% @heroes.sample(3).each do |heroe| %>
           <div class="card">
           <div class="heroes-cards"><%= cl_image_tag "#{heroe.name}", alt: "#{heroe.name}", class:"movie-image" %>
             <div><p class="h2"><%= heroe.name %></p><br>

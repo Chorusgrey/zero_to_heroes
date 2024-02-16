@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :hero
+  belongs_to :heroe
   belongs_to :user
   validates :booking_number, presence: true
   validates :start_date, presence: true
