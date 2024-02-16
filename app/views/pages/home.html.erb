@@ -14,13 +14,14 @@
       <div class="cards">
           <% @heroes.each do |heroe| %>
           <div class="card">
-          <div class="heroes-cards"><%= cl_image_tag "iron_man", alt: "#{heroe.name}", width: 300, height: 200, crop: :auto_pad %>
+          <div class="heroes-cards"><%= cl_image_tag "#{heroe.name}", alt: "#{heroe.name}", class:"movie-image" %>
             <div><p class="h2"><%= heroe.name %></p><br>
-            <p class="fs-6"><%= heroe.description %></p>
-            <button class="button">Montrer</button>
-              </div>
-              </div>
+            <p class="fs-6 p-3"><%= heroe.description %></p>
             </div>
+              </div>
+            <button class="button">Montrer</button>
+            </div>
+
         <% end %>
         </div>
     </div>

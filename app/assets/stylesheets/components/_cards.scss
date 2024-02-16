@@ -30,6 +30,8 @@
   background-color: #9F001B;
   color: white;
   border-radius: 5px;
+  padding-left: 16px;
+  width: 100px;
 }
 
 .cards :first-child {
@@ -38,6 +40,24 @@
 
 .formulaire {
   padding-top: 16px;
+}
+
+.movie-image{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  // width: 100%;
+  // height: 220px;
+  // object-fit: cover;
+  object-position: center;
+
+}
+
+.h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 16px;
 }
 
 // Smallest device
