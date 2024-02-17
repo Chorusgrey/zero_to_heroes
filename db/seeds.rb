@@ -64,32 +64,32 @@ puts "Attach photo to users"
 puts "------------------------------------------------------------------------------------------------------"
 puts "------------------------------------------------------------------------------------------------------"
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 
 charlie.photo.attach(io: file_user, filename: "charlie.png", content_type: "image/jpg")
 charlie.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 gwendal.photo.attach(io: file_user, filename: "gwendal.png", content_type: "image/jpg")
 gwendal.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 benoit.photo.attach(io: file_user, filename: "benoit.png", content_type: "image/jpg")
 benoit.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 dreni.photo.attach(io: file_user, filename: "nes.png", content_type: "image/png")
 dreni.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 perrine.photo.attach(io: file_user, filename: "nes.png", content_type: "image/png")
 perrine.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 karim.photo.attach(io: file_user, filename: "nes.png", content_type: "image/png")
 karim.save
 
-file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708107897/spider%20man.jpg")
+file_user = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708169346/ss.jpg")
 coraline.photo.attach(io: file_user, filename: "nes.png", content_type: "image/png")
 coraline.save
 
