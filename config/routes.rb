@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :heros, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
-    # /heroes/search
+    # /heros/search
     collection do
       get :search
     end
