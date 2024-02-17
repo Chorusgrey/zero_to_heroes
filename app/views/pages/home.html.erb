@@ -8,20 +8,17 @@
   <%= f.submit class: "button" %>
 <% end %></p>
   </div>
-
-
   <div class="container">
       <div class="cards">
-          <% @heroes.each do |heroe| %>
+          <% @heroes.sample(3).each do |heroe| %>
           <div class="card">
-          <div class="heroes-cards"><%= cl_image_tag "#{heroe.name}", alt: "#{heroe.name}", class:"movie-image" %>
+          <div class="heroes-cards"><%= heroe.photos.attached? ? cl_image_tag(heroe.photos.first&.key, alt: "#{heroe.name}", class:"movie-image") : image_tag("superhero.jpg")%>
             <div><p class="h2"><%= heroe.name %></p><br>
             <p class="fs-6 p-3"><%= heroe.description %></p>
             </div>
               </div>
             <button class="button">Montrer</button>
             </div>
-
         <% end %>
         </div>
     </div>
