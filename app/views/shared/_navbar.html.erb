@@ -14,10 +14,10 @@
             <%= link_to "Acceuil", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Super Héros", heroes_path, class: "nav-link" %>
+            <%= link_to "Super Héros", heros_path, class: "nav-link" %>
           </li>
           <li class="nav-item active ms-auto search-form">
-            <%= simple_form_for :search, url: search_heroes_path, method: :get, html: { class: 'search-form' } do |f| %>
+            <%= simple_form_for :search, url: search_heros_path, method: :get, html: { class: 'search-form' } do |f| %>
               <%= f.input :query, label: false, placeholder: 'Rechercher des héros', input_html: { class: 'form-control' } %>
               <%= f.submit 'Rechercher', class: 'btn btn-danger', style: 'margin-bottom: 18px;' %>
             <% end %>
