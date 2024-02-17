@@ -17,6 +17,7 @@
 .card {
   grid-gap: 16px;
   display: flex;
+  flex-direction: column;
   width: 300px;
   padding: 0;
   background-color: #fff;
