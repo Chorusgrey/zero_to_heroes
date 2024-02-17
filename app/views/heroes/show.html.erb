@@ -2,7 +2,7 @@
 <div class="container py-5">
   <div class="row">
     <div class="bg-white rounded text-center">
-      <h2>Buenvenuti <%= @heroe.name %></h1>
+      <h2 class="fw-bold">Buenvenuti <%= @heroe.name %></h1>
     </div>
   </div>
 </div>
@@ -13,7 +13,7 @@
       <h2>[ photo ]</h2>
     </div>
     <div class="col-sm-6 bg-white rounded text-center">
-      <h2>Louez votre super hero</h3>
+      <h2 class="fw-bold">Louez votre super hero</h3>
       <p>Prix par jour: <%= @heroe.price_per_day %>CHF</p>
     </div>
   </div>
@@ -22,11 +22,11 @@
 <div class="container-fluid py-5">
   <div class="row">
     <div class="col-sm-6 bg-white rounded text-center">
-      <h2><%= @heroe.description %></h2>
+      <h5 class="fw-bold"><%= @heroe.description %></h5>
       <p class="text-start">Prix par jour: <%= @heroe.price_per_day %>CHF</p>
     </div>
     <div class="col-sm-6 bg-white rounded text-center">
-      <h3>Où est ton super hero ?</h3>
+      <h3 class="fw-bold">Où est ton super hero ?</h3>
       <p>[ MAP ]</p>
     </div>
   </div>
