@@ -15,6 +15,12 @@ class HeroesController < ApplicationController
   def create
   end
 
+  def search
+    query = params[:search][:query]
+    @heroes = Heroe.where("name ILIKE ?", "%#{query}%")
+    render :index
+  end
+
   private
 
   def heroe_params

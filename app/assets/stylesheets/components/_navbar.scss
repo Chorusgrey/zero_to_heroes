@@ -1,6 +1,23 @@
 .navbar-lewagon {
-
   background: #004672;
+  justify-content: space-between;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.form-control {
+  position: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-lewagon .nav-link,
