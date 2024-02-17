@@ -1,19 +1,16 @@
-.heroes-cards {
+.heroes-image {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  position: relative;
   margin: .5rem 0 1rem 0;
-  margin: 8px;
+  // margin: 8px;
 }
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 16px;
   margin: .5rem 0 1rem 0;
-  border-radius: 16px;
-
 
 }
 
@@ -21,7 +18,9 @@
   grid-gap: 16px;
   display: flex;
   width: 300px;
+  padding: 0;
   background-color: #fff;
+  border-radius: 16px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 
 }
@@ -29,13 +28,11 @@
 .button {
   background-color: #9F001B;
   color: white;
+  position: relative;
   border-radius: 5px;
-  padding-left: 16px;
+  margin-left: 16px;
+  margin-bottom: 16px;
   width: 100px;
-}
-
-.cards :first-child {
-  align-self: center;
 }
 
 .formulaire {
@@ -44,13 +41,13 @@
 
 .movie-image{
   width: 100%;
-  height: 350px;
-  object-fit: fill;
+  height: 200px;
+  object-fit: cover;
   border-radius: 16px 16px 0 0;
   // width: 100%;
   // height: 220px;
   // object-fit: cover;
-  object-position: center;
+  object-position: top;
 
 }
 
@@ -58,6 +55,7 @@
   font-size: 1.5rem;
   margin: 0;
   padding-left: 16px;
+  padding-top: 16px;
 }
 
 // Smallest device
