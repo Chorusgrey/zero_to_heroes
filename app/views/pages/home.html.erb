@@ -2,21 +2,19 @@
   <div class="banner mb-3" style="background-color: #007DA6;">
     <h1>Votre Super Héro favori</h1>
     <h1>à côté de chez vous !</h1>
-    <p class="formulaire"><%= form_with model: @heroe do |f| %>
+    <p class="formulaire"><%= form_with model: @hero do |f| %>
   <% f.label :address %>
   <%= f.text_field :address, placeholder: "Votre ville" %>
   <%= f.submit class: "button" %>
 <% end %></p>
   </div>
-
-
   <div class="container">
       <div class="cards">
-          <% @heroes.sample(3).each do |heroe| %>
+          <% @heros.sample(3).each do |hero| %>
           <div class="card">
-          <div class="heroes-cards"><%= cl_image_tag "#{heroe.name}", alt: "#{heroe.name}", class:"movie-image" %>
-            <div><p class="h2"><%= heroe.name %></p><br>
-            <p class="fs-6 p-3"><%= heroe.description %></p>
+          <div class="heros-cards"><%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
+            <div><p class="h2"><%= hero.name %></p><br>
+            <p class="fs-6 p-3"><%= hero.description %></p>
             </div>
               </div>
             <button class="button">Montrer</button>

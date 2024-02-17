@@ -1,6 +1,6 @@
 require "test_helper"
 
-class HeroeTest < ActiveSupport::TestCase
+class HeroTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
