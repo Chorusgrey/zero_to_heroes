@@ -3,7 +3,7 @@ class HerosController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @heros = params[:search_by_address] != '' ? Hero.where("name LIKE '%#{params[:search_by_address]}%'") : @heros = Hero.all
+    @heros = params[:search_by_address] != '' ? Hero.where("address LIKE '%#{params[:search_by_address]}%'") : @heros = Hero.all
   end
 
   def show

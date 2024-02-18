@@ -3,8 +3,6 @@
     <h1>Votre Super Héro favori</h1>
     <h1>à côté de chez vous !</h1>
       <p class="formulaire">
-        <p class="formulaire">
-
         <%= form_tag "/heros", method: "GET" do %>
         <%= text_field_tag :search_by_address, params[:search_by_address], placeholder: "Nom de la ville" %>
         <%= submit_tag "Rechercher", class: "button-banner" %>
