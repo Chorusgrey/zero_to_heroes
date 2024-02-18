@@ -15,8 +15,10 @@
           <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
             <div class="text"><p class="h2"><%= hero.name %></p><br>
             <p class="fs-6 p-3"><%= hero.description %></p>
-              </div>
-            <%= link_to "Montrer", hero_path(hero), class:"button"%>
+            </div>
+            <div class="card-footer"><%= link_to "Montrer", hero_path(hero), class:"button"%>
+            <span><%= hero.price_per_day%>€ par jour</span></div>
+
             </div>
           <% end %>
     </div>
