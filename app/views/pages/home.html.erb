@@ -13,10 +13,10 @@
           <% @heros.sample(3).each do |hero| %>
           <div class="card">
           <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
-            <div><p class="h2"><%= hero.name %></p><br>
+            <div class="text"><p class="h2"><%= hero.name %></p><br>
             <p class="fs-6 p-3"><%= hero.description %></p>
               </div>
-            <button class="button"><% link_to hero.name, hero_path(hero)%>Montrer</button>
+              <button class="button"><% link_to hero.name, hero_path(hero)%>Montrer</button>
             </div>
         <% end %>
         </div>
