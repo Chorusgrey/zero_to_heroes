@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
+  <div class="cards">
+    <div class="card-new-signup">
       <div class="cardh1">
         <h2>Log in to your account</h2>
         <p>Welcome back! Please enter your details.</p>
@@ -26,8 +26,7 @@
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-
-</div>
+  </div>
 
   <div class="row mb-4">
     <div class="col d-flex justify-content-center">
