@@ -1,4 +1,10 @@
-<h2>Log in to your account</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="cardh1">
+        <h2>Log in to your account</h2>
+        <p>Welcome back! Please enter your details.</p>
+      </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -20,12 +26,11 @@
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-  </div>
 
-  <!-- 2 column grid layout for inline styling -->
+</div>
+
   <div class="row mb-4">
     <div class="col d-flex justify-content-center">
-      <!-- Checkbox -->
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
         <label class="form-check-label" for="form2Example31"> Remember me </label>
@@ -33,21 +38,22 @@
     </div>
 
     <div class="col">
-      <!-- Simple link -->
       <a href="#!">Forgot password?</a>
     </div>
   </div>
 
   <div class="btn_signup">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign in" %>
   </div>
 
-  <!-- Register buttons -->
   <div class="text-center">
-    <p>Not a member? <a href="#!">Register</a></p>
-    <p>or sign up with:</p>
-    <button type="button" class="btn btn-link btn-floating mx-1">
-      <i class=""></i>
-    </button>
+    <p>Don't have an account? <a href="#!">Register</a></p>
+    <p>or sign up with:
+    <i class="fa-brands fa-google"></i>
+    </p>
   </div>
+
 <% end %>
+</div>
+</div>
+</div>
