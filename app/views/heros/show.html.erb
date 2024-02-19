@@ -4,11 +4,11 @@
   <div class="container-fluid py-5">
     <div class="row">
       <div class="col-sm-6 bg-white rounded text-center">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')"><%= @hero.name %></div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"><%= @hero.name %></div>
         <div class="cards">
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">Breakfast</div>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">Lunch</div>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">Dinner</div>
+          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
         </div>
       </div>
 
@@ -30,10 +30,10 @@
 
   <div class="container-fluid py-5">
     <div class="row">
-      <div class="col-sm-6 bg-white rounded text-center">
+      <div class="col-sm-6 bg-white rounded text-center mt-4">
         <h5 class="fw-bold">Une description du hero</h5>
           <p><%= @hero.description %></p>
-          <p class="text-start">Prix par jour: <%= @hero.price_per_day %>EUR</p>
+          <p>Prix par jour: <%= @hero.price_per_day %>EUR</p>
       </div>
 
       <div class="col-sm-6 bg-white rounded text-center">
