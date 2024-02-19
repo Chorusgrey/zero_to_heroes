@@ -1,6 +1,6 @@
 <div class="container">
     <div class="result"><p><span><%="#{@heros.count}"%></span> Super-héros à proximité</p></div>
-    <div class="cards">
+      <div class="cards start">
       <% @heros.each do |hero| %>
         <div class="card">
           <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
@@ -12,4 +12,4 @@
             </div>
           <% end %>
     </div>
-</div>
+  </div>

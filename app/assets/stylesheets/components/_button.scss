@@ -22,11 +22,20 @@
   text-align: center;
   padding: 4px 0;
 }
-.result {
-  font-size: 1.5rem;
-  margin: 0;
-  padding-left: 22px;
-  padding-top: 16px;
+.formulaire-button {
+  background-color: #9F001B;
+  color: white;
+  position: relative;
+  border-radius: 6px;
+  margin-left: 110px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  width: 120px;
+  text-decoration: none;
+  text-align: center;
+  padding: 4px 0;
+  display: flex;
+  justify-content: center;
 }
 .formulaire {
   padding-top: 16px;
