@@ -109,7 +109,7 @@ file_superman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v170
 superman.photos.attach(io: file_superman, filename: "nes.png", content_type: "image/png")
 superman.save
 
-file_batman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708102313/batman.jpg")
+file_batman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708275023/batman%202.jpg")
 batman.photos.attach(io: file_batman, filename: "nes.png", content_type: "image/png")
 batman.save
 
@@ -161,11 +161,11 @@ file_hulk = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708104
 hulk.photos.attach(io: file_hulk, filename: "nes.png", content_type: "image/png")
 hulk.save
 
-file_black_panther = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708104658/black%20panther.jpg")
+file_black_panther = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708274689/black%20panther%202.webp")
 black_panther.photos.attach(io: file_black_panther, filename: "nes.png", content_type: "image/png")
 black_panther.save
 
-file_doctor_strange = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708104748/doctor%20strange.jpg")
+file_doctor_strange = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708274866/doctor%20strange%202.jpg")
 doctor_strange.photos.attach(io: file_doctor_strange, filename: "nes.png", content_type: "image/png")
 doctor_strange.save
 
@@ -173,7 +173,7 @@ file_ant_man = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708
 ant_man.photos.attach(io: file_ant_man, filename: "nes.png", content_type: "image/png")
 ant_man.save
 
-file_wolverine = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708104951/wolverine.jpg")
+file_wolverine = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708275199/wolverine%202.jpg")
 wolverine.photos.attach(io: file_wolverine, filename: "nes.png", content_type: "image/png")
 wolverine.save
 
