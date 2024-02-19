@@ -2,8 +2,8 @@
   <div class="cards">
     <div class="card-new-signup">
       <div class="cardh1">
-        <h2>Log in to your account</h2>
-        <p>Welcome back! Please enter your details.</p>
+        <h2>Create an account</h2>
+        <p>Start your journey!</p>
       </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -36,21 +36,15 @@
       </div>
     </div>
 
-    <div class="col">
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div>
-
   <div class="btn_signup">
-    <%= f.button :submit, "Sign in" %>
+    <%= f.button :submit, "Get started" %>
   </div>
 
-  <div class="text-center">
-    <p>Don't have an account? <a href="#!">Register</a></p>
-    <p>or sign up with:
-    <i class="fa-brands fa-google"></i>
-    </p>
-  </div>
+  <div class="cardh1">
+  <p>or sign up with:
+  <i class="fa-brands fa-google"></i>
+  </p>
+</div>
 
 <% end %>
 </div>
