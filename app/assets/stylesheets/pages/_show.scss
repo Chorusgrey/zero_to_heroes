@@ -9,7 +9,7 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
@@ -53,3 +53,57 @@
   grid-template-columns: 1fr 1fr 1fr;
   }
   }
+
+  .calendar {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+.calendar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.calendar form {
+    display: flex;
+    flex-direction: column;
+}
+.calendar label {
+    margin-bottom: 8px;
+    color: #555;
+}
+.calendar input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.calendar input[type="submit"] {
+    padding: 10px;
+    background-color: #9F001B;
+    color: #fff;
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.calendar input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Set background color to white */
+  font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+  max-width: 1500px; /* Set maximum width for the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding for space between content and container */
+}
