@@ -3,16 +3,25 @@ class HerosController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @heros = Hero.all
+    @heros = params[:search_by_address] != '' ? Hero.where("address LIKE '%#{params[:search_by_address]}%'") : @heros = Hero.all
   end
 
   def show
   end
 
   def new
+    @hero = Hero.new()
   end
 
   def create
+    @hero = Hero.new(hero_params)
+    #penser à changer la ligne 19 par : @heroe.user = current_user (device)
+    @hero.user_id = 15
+    if @hero.save
+    redirect_to heros_path(@hero)
+    else
+    render :new, status: :unprocessable_entity
+    end
   end
 
   def search
