@@ -1,4 +1,6 @@
 <!-- Find me in app/views/heros/show.html.erb -->
+<% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
+
 <div class="container py-5">
   <div class="row">
     <div class="bg-white rounded text-center">
@@ -10,9 +12,26 @@
 <div class="container-fluid py-5">
   <div class="row">
     <div class="col-sm-6 bg-white rounded text-center">
-      <h2>[ photo ]</h2>
-    </div>
-    <div class="col-sm-6 bg-white rounded text-center">
+        <div class="row">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">
+            <%= @hero.name %>
+          </div>
+
+          <div class="cards">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">
+              Breakfast
+            </div>
+
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">
+              Lunch
+            </div>
+
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @hero_photo_url %>')">
+              Dinner
+            </div>
+          </div>
+        </div>
+      <div class="col-sm-6 bg-white rounded text-center">
       <h2 class="fw-bold">Louez votre super hero</h3>
       <p>Prix par jour: <%= @hero.price_per_day %>CHF</p>
     </div>
