@@ -1,2 +1,32 @@
-<h1>Heros#new</h1>
-<p>Find me in app/views/heros/new.html.erb</p>
+<div class="container">
+    <div class="cards">
+        <div class="card-new">
+          <h2>Ajouter votre héros</h2><br>
+            <%= form_with model: @hero, local: true do |form| %>
+                <div class="mb-3">
+                    <%= form.label :name, class: "form-label" %>
+                    <%= form.text_field :name, class: "form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :description, class: "form-label" %>
+                    <%= form.text_area :description, class: "form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :price_per_day, class: "form-label" %>
+                    <%= form.number_field :price_per_day, class: "form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :address, class: "form-label" %>
+                    <%= form.text_field :address, class: "form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :photo, class: "form-label" %>
+                    <%= form.file_field :photo, class: "form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.submit "Enregistrer", class:"button" %>
+                </div>
+            <% end %>
+            </div>
+        </div>
+    </div>
