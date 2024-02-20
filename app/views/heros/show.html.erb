@@ -34,3 +34,19 @@
     </div>
   </div>
 </div>
+
+
+
+
+<div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.input :start_date,
+              as: :string,
+              input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
+  <%= f.input :end_date,
+              as: :string,
+              input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
+  <div data-price-calculation-target="totalPrice"></div>
+  <%= f.button :submit, "Réserver" %>
+<% end %>
+</div>

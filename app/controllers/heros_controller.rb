@@ -7,8 +7,7 @@ class HerosController < ApplicationController
   end
 
   def show
-    # @heros = Hero.all
-    # The `geocoded` scope filters only flats with coordinates
+    @booking = Booking.new
     @array_hero = Hero.where(id: @hero.id)
     @markers = @array_hero.geocoded.map do |hero|
       {
