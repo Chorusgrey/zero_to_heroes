@@ -51,6 +51,7 @@ gem "font-awesome-sass", "~> 6.1"
 gem "sassc-rails"
 gem "cloudinary"
 gem "simple_form"
+gem "geocoder"
 
 group :development, :test do
   gem "dotenv-rails"
