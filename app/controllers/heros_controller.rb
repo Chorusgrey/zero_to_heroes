@@ -7,6 +7,15 @@ class HerosController < ApplicationController
   end
 
   def show
+    # @heros = Hero.all
+    # The `geocoded` scope filters only flats with coordinates
+    @array_hero = Hero.where(id: @hero.id)
+    @markers = @array_hero.geocoded.map do |hero|
+      {
+        lat: hero.latitude,
+        lng: hero.longitude
+      }
+    end
   end
 
   def new
@@ -16,7 +25,7 @@ class HerosController < ApplicationController
   def create
     @hero = Hero.new(hero_params)
     #penser à changer la ligne 19 par : @heroe.user = current_user (device)
-    @hero.user_id = 1
+    @hero.user_id = 8
     if @hero.save
     redirect_to heros_path(@hero)
     else
