@@ -1,27 +1,37 @@
 <!-- Find me in app/views/heros/show.html.erb -->
-<div class="container py-5">
-  <div class="row">
-    <div class="bg-white rounded text-center">
-      <h2 class="fw-bold">Buenvenuti <%= @hero.name %></h1>
-    </div>
-  </div>
-</div>
+<% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
+<div class="body">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="fw-bold"><%= @hero.name %></h1>
+        <div class="col-sm-6 bg-white rounded text-center">
+          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+          <div class="cards">
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+          </div>
+        </div>
 
+        <div class="col-sm-6 bg-white rounded text-center">
+          <div class="calendar">
+            <h5 class="fw-bold">Louer votre Super Héro</h5>
+            <form>
+              <label for="start_date">De</label>
+              <input type="date" id="start_date" name="start_date">
+              <label for="end_date">A</label>
+              <input type="date" id="end_date" name="end_date">
+              <label for="price" class="fw-bold">Total: <%= @hero.price_per_day %>EUR</label>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
 <div class="container-fluid py-5">
   <div class="row">
-    <div class="col-sm-6 bg-white rounded text-center">
-      <h2>[ photo ]</h2>
-    </div>
-    <div class="col-sm-6 bg-white rounded text-center">
-      <h2 class="fw-bold">Louez votre super hero</h3>
-      <p>Prix par jour: <%= @hero.price_per_day %>CHF</p>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid py-5">
-  <div class="row">
-    <div class="col-sm-6 bg-white rounded text-center">
+    <div class="col-sm-6 bg-white rounded text-center mt-4 p-3 mb-5 bg-white rounded shadow-sm">
       <h5 class="fw-bold"><%= @hero.description %></h5>
       <p class="text-start">Prix par jour: <%= @hero.price_per_day %>CHF</p>
     </div>
@@ -32,7 +42,6 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
-  </div>
 </div>
 
 
