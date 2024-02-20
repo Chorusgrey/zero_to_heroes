@@ -1,6 +1,6 @@
-<!-- Find me in app/views/heros/show.html.erb -->
-<% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
-<div class="body">
+<div class="show-hero">
+  <% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
+  <div class="body">
     <div class="container-fluid">
       <div class="row">
         <h1 class="fw-bold"><%= @hero.name %></h1>
@@ -16,14 +16,18 @@
         <div class="col-sm-6 bg-white rounded text-center">
           <div class="calendar">
             <h5 class="fw-bold">Louer votre Super Héro</h5>
-            <form>
-              <label for="start_date">De</label>
-              <input type="date" id="start_date" name="start_date">
-              <label for="end_date">A</label>
-              <input type="date" id="end_date" name="end_date">
-              <label for="price" class="fw-bold">Total: <%= @hero.price_per_day %>EUR</label>
-              <input type="submit" value="Submit">
-            </form>
+          <div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
+          <%= simple_form_for(@booking) do |f| %>
+          <%= f.input :start_date,
+              as: :string,
+              input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
+              <%= f.input :end_date,
+              as: :string,
+              input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
+              <div data-price-calculation-target="totalPrice"></div>
+              <%= f.button :submit, "Réserver" %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
@@ -43,19 +47,6 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
 </div>
-
-
-
-
-<div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
-<%= simple_form_for(@booking) do |f| %>
-  <%= f.input :start_date,
-              as: :string,
-              input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
-  <%= f.input :end_date,
-              as: :string,
-              input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
-  <div data-price-calculation-target="totalPrice"></div>
-  <%= f.button :submit, "Réserver" %>
-<% end %>
+</div>
+</div>
 </div>

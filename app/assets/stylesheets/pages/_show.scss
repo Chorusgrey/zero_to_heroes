@@ -1,4 +1,5 @@
-.card-category {
+.show-hero {
+  .card-category {
   background-size: cover;
   background-position: center top;
   height: 180px;
@@ -13,45 +14,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
-.cards {
+  .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   }
-
-  // Smallest device
-  @media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-  grid-template-columns: 1fr;
-  }
-  }
-
-
-  @media (min-width: 576px) {
-  .cards {
-  grid-template-columns: 1fr;
-  }
-  }
-
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
-  .cards {
-  grid-template-columns: 1fr 1fr;
-  }
-  }
-
-  @media (min-width: 992px) {
-  .cards {
-  grid-template-columns: 1fr 1fr 1fr;
-  }
-  }
-
-  @media (min-width: 1200px) {
-  .cards {
-  grid-template-columns: 1fr 1fr 1fr;
-  }
-  }
-
   .calendar {
     width: 300px;
     margin: 50px auto;
@@ -59,27 +26,27 @@
     border-radius: 8px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     padding: 20px;
-}
-.calendar h2 {
+  }
+  .calendar h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-}
-.calendar form {
+  }
+  .calendar form {
     display: flex;
     flex-direction: column;
-}
-.calendar label {
+  }
+  .calendar label {
     margin-bottom: 8px;
     color: #555;
-}
-.calendar input[type="date"] {
+  }
+  .calendar input[type="date"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 15px;
-}
-.calendar input[type="submit"] {
+  }
+  .calendar input[type="submit"] {
     padding: 10px;
     background-color: #9F001B;
     color: #fff;
@@ -88,20 +55,21 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-.calendar input[type="submit"]:hover {
+  }
+  .calendar input[type="submit"]:hover {
     background-color: #0056b3;
-}
+  }
 
-.body {
+  .body {
   margin: 0;
   padding: 0;
   background-color: #ffffff; /* Set background color to white */
   font-family: Arial, sans-serif;
-}
+  }
 
-.container-fluid {
+  .container-fluid {
   max-width: 1500px; /* Set maximum width for the content */
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add padding for space between content and container */
+  }
 }
