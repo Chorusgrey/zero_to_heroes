@@ -1,5 +1,5 @@
 class HerosController < ApplicationController
-  before_action :set_hero, only: [:show]
+  before_action :set_hero, only: [:show, :destroy]
   skip_before_action :authenticate_user!
 
   def index
@@ -16,12 +16,17 @@ class HerosController < ApplicationController
   def create
     @hero = Hero.new(hero_params)
     #penser à changer la ligne 19 par : @heroe.user = current_user (device)
-    @hero.user_id = 15
+    @hero.user_id = 1
     if @hero.save
     redirect_to heros_path(@hero)
     else
     render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @hero.destroy
+    redirect_to heros_path, status: :see_other
   end
 
   def search
