@@ -34,7 +34,6 @@ puts "--------------------------------------------------------------------------
 puts "------------------------------------------------------------------------------------------------------"
 
 superman = Hero.create!(name: "Superman", description: "Je suis un super pilote pour le covoiturage", address: "Paris", available: true, price_per_day: 100, user: charlie)
-batman = Hero.create!(name: "Batman", description: "Super hôte pour un weekend de Luxe", address: "Nice", available: true, price_per_day: 200, user: charlie)
 wonder_woman = Hero.create!(name: "Wonder Woman", description: "Super coach pour la remise en forme et la fonte du gras du ventre", address: "Paris", available: true, price_per_day: 150, user: gwendal)
 flash_gordon = Hero.create!(name: "Flash Gordon", description: "Livraison de tous vos colis en un temps record", address: "Lyon", available: true, price_per_day: 220, user: gwendal)
 aquaman = Hero.create!(name: "Aquaman", description: "Je suis un super guide pour la plongée sous-marine", address: "Marseille", available: true, price_per_day: 180, user: benoit)
@@ -43,7 +42,7 @@ cyborg = Hero.create!(name: "Cyborg", description: "Je suis un super guide pour 
 hawkeye = Hero.create!(name: "Hawkeye", description: "Je suis un super prof de Tir a l'arc", address: "Paris", available: true, price_per_day: 250, user: benoit)
 black_widow = Hero.create!(name: "Black Widow", description: "Je suis un super prof pour les cours de self-defense", address: "Paris", available: true, price_per_day: 150, user: dreni)
 spiderman = Hero.create!(name: "Spiderman", description: "Je suis un super guide pour les cours d'escalade", address: "Paris", available: true, price_per_day: 200, user: dreni)
-iron_man = Hero.create!(name: "Iron man", description: "Je suis un super garagiste", address: "Marseille", available: true, price_per_day: 500, user: dreni)
+iron_man = Hero.create!(name: "Iron man", description: "Je suis un super garagiste.", address: "Marseille", available: true, price_per_day: 500, user: dreni)
 thor = Hero.create!(name: "Thor", description: "Je suis un super bricoleur, je manie super bien le marteau", address: "Lyon", available: true, price_per_day: 250, user: perrine)
 captain_america = Hero.create!(name: "Captain America", description: "Je suis un super guide pour les cours de musculation", address: "Paris", available: true, price_per_day: 150, user: perrine)
 hulk = Hero.create!(name: "Hulk", description: "Je suis un super guide pour les cours de Yoga", address: "Paris", available: true, price_per_day: 150, user: perrine)
