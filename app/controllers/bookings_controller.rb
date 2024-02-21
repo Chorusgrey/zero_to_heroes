@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.hero_id = params[:hero_id]
 
     if @booking.save
-      redirect_to dashboard_path(current_user), notice: "Booking was successfully created"
+      redirect_to dashboard_path(current_user), alert: "Booking was successfully created"
     else
       render hero_path(params[:hero_id]), status: :unprocessable_entity, alert: "Booking was not created"
     end
