@@ -76,6 +76,19 @@
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add padding for space between content and container */
   }
+
+
+  .bouton-checkup {
+    padding: 10px;
+    background-color: #9F001B;
+    color: #fff;
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
   .image-left-show {
     padding-right: 12px;
     padding: 0;
@@ -83,7 +96,5 @@
   .image-right-show {
     padding-left: 70px;
   }
-  // .hd {
-  //   height: ;
-  // }
+
 }

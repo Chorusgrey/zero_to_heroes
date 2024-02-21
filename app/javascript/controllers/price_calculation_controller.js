@@ -20,7 +20,7 @@ export default class extends Controller {
     console.log(totalPrice);
 
     if (totalPrice > 0) {
-      this.totalPriceTarget.innerHTML = `Total price: $${totalPrice} euros`
+      this.totalPriceTarget.innerHTML = `Total price: ${totalPrice} EUR`
     } else {
       this.totalPriceTarget.innerHTML = `please select a start and end date`
     }
