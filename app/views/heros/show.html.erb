@@ -18,9 +18,9 @@
 
         <div class="col-sm-6 bg-white p-6 rounded text-center image-right-show">
           <div class="calendar">
-            <h5 class="fw-bold">Louer votre Super Héro</h5>
+            <h5 class="fw-bold">Louer votre Super Héros</h5>
           <div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
-          <%= simple_form_for(@booking) do |f| %>
+          <%= simple_form_for([@hero, @booking]) do |f| %>
           <%= f.input :start_date, :label => "Date de début",
               as: :string,
               input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
@@ -28,8 +28,9 @@
               as: :string,
               input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
               <div data-price-calculation-target="totalPrice"></div>
-              <div data-bs-toggle="modal" data-bs-target="#exampleModal" <%= f.button :submit, "Réserver", class: "bouton-checkup" %>>
-              > Réserver < <
+              <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <%= f.button :submit, "Réserver", class: "bouton-checkup" %>
+
               </div>
               <% end %>
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,7 +77,7 @@
       <p class="text-left">Prix par jour: <%= @hero.price_per_day %> Euros</p>
     </div>
     <div class="col-sm-6 bg-white rounded text-left  image-right-show bg-white rounded">
-      <h3 class="fw-bold">Où est ton super hero ?</h3>
+      <h3 class="fw-bold">Où est ton Super Héros ?</h3>
       <div style="width: 100%; height: 250px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
