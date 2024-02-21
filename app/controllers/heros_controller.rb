@@ -18,14 +18,14 @@ class HerosController < ApplicationController
   end
 
   def new
-    @hero = Hero.new()
+    @hero = Hero.new
   end
 
   def create
     @hero = Hero.new(hero_params)
-    @hero.user = current_user(device)
+    @hero.user = current_user
     if @hero.save
-    redirect_to heros_path(@hero)
+    redirect_to hero_path(@hero)
     else
     render :new, status: :unprocessable_entity
     end
