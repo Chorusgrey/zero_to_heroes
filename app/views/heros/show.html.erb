@@ -18,15 +18,46 @@
             <h5 class="fw-bold">Louer votre Super Héro</h5>
           <div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
           <%= simple_form_for(@booking) do |f| %>
-          <%= f.input :start_date,
+          <%= f.input :start_date, :label => "Date de début",
               as: :string,
               input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
-              <%= f.input :end_date,
+              <%= f.input :end_date, :label => "Date de fin",
               as: :string,
               input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
               <div data-price-calculation-target="totalPrice"></div>
-              <%= f.button :submit, "Réserver" %>
+              <div data-bs-toggle="modal" data-bs-target="#exampleModal" <%= f.button :submit, "Réserver", class: "bouton-checkup" %>>
+              > Réserver < <
+              </div>
               <% end %>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Payment Methods</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/charge" method="post">
+                        <label for="card">Card Number:</label>
+                        <input type="text" id="card" name="card"><br><br>
+
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="text" id="expiry" name="expiry"><br><br>
+
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv"><br><br>
+
+                        <label for="amount">MONTANT:</label>
+                        <input type="text" id="amount" name="amount"><br><br><p>sss</p>
+
+                        <button type="submit">Pay Now</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
