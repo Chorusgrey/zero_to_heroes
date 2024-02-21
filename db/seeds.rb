@@ -3,9 +3,10 @@ require "open-uri"
 puts "Destroying all heroes..."
 puts "Destroying all users..."
 puts "Destroying all bookings..."
-User.destroy_all if Rails.env.development?
-Hero.destroy_all if Rails.env.development?
-Booking.destroy_all if Rails.env.development?
+
+Booking.destroy_all
+Hero.destroy_all
+User.destroy_all
 
 puts "------------------------------------------------------------------------------------------------------"
 puts "------------------------------------------------------------------------------------------------------"
