@@ -1,19 +1,22 @@
+
 <div class="show-hero">
-  <% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
-  <div class="body">
+  <div class="container">
+    <div class="card-show">
+    <% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
+    <div class="body">
     <div class="container-fluid">
       <div class="row">
-        <h1 class="fw-bold"><%= @hero.name %></h1>
-        <div class="col-sm-6 bg-white rounded text-center">
+        <h1 class="fw-bold"><%=@hero.name %></h1>
+        <div class="col-sm-6 bg-white rounded text-center image-left-show">
           <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
-          <div class="cards">
+          <div class="cards-show">
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
           </div>
         </div>
 
-        <div class="col-sm-6 bg-white rounded text-center">
+        <div class="col-sm-6 bg-white p-6 rounded text-center image-right-show">
           <div class="calendar">
             <h5 class="fw-bold">Louer votre Super Héro</h5>
           <div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
@@ -66,18 +69,22 @@
 
 <div class="container-fluid py-5">
   <div class="row">
-    <div class="col-sm-6 bg-white rounded text-center mt-4 p-3 mb-5 bg-white rounded shadow-sm">
-      <h5 class="fw-bold"><%= @hero.description %></h5>
-      <p class="text-start">Prix par jour: <%= @hero.price_per_day %>CHF</p>
+    <div class="col-sm-6 bg-white rounded text-left image-left-show bg-white rounded">
+      <h5 class="fw-bold hd"><%= @hero.description %></h5><br>
+      <p class="text-show">Ce super-héros incarne l'essence de la bravoure et de l'innovation, fusionnant habilement force, intelligence et détermination pour combattre l'injustice sous toutes ses formes. Équipé d'un costume distinctif conçu pour optimiser ses capacités uniques,
+        il navigue à travers les défis avec une agilité et une précision exceptionnelles. Son arsenal, riche en gadgets avancés et en technologies personnalisées, lui confère un avantage tactique dans les situations les plus périlleuses. Doté d'une résilience remarquable et d'un esprit stratégique, il utilise ses compétences non seulement pour vaincre les menaces, mais aussi pour inspirer et protéger sa communauté. Sa présence est un symbole de sécurité et d'espoir, rappelant à chacun que, malgré les ténèbres, la lumière de l'héroïsme brille toujours avec force. Son engagement inébranlable envers la justice fait de lui un allié précieux et un défenseur infatigable du bien.</p>
+      <p class="text-left">Prix par jour: <%= @hero.price_per_day %> Euros</p>
     </div>
-    <div class="col-sm-6 bg-white rounded text-center">
+    <div class="col-sm-6 bg-white rounded text-left  image-right-show bg-white rounded">
       <h3 class="fw-bold">Où est ton super hero ?</h3>
-      <div style="width: 100%; height: 600px;"
+      <div style="width: 100%; height: 250px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
-</div>
-</div>
-</div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
 </div>
