@@ -17,7 +17,7 @@
 </div>
 <div class="mb-3">
   <%= form.label :photos, class: "form-label" %>
-  <%= form.file_field :photos, class: "form-control" %>
+  <%= form.file_field :photos, multiple: true, class: "form-control" %>
 </div>
 <br><div class="mb-3">
   <%= form.submit "Ajouter", class:"formulaire-button" %>
