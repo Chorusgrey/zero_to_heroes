@@ -11,20 +11,21 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
   }
 
-  .cards {
+  .cards-show {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 16px;
   }
   .calendar {
-    width: 300px;
+    width: 400px;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
     padding: 20px;
   }
   .calendar h2 {
@@ -66,10 +67,23 @@
   background-color: #ffffff; /* Set background color to white */
   font-family: Arial, sans-serif;
   }
-
+  .row {
+    width: 100%;
+  }
   .container-fluid {
+  width: 1000px;
   max-width: 1500px; /* Set maximum width for the content */
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add padding for space between content and container */
   }
+  .image-left-show {
+    padding-right: 12px;
+    padding: 0;
+  }
+  .image-right-show {
+    padding-left: 70px;
+  }
+  // .hd {
+  //   height: ;
+  // }
 }
