@@ -1,6 +1,6 @@
 require "open-uri"
 
-puts "Destroying all heroes..."
+puts "Destroying all heros..."
 puts "Destroying all users..."
 puts "Destroying all bookings..."
 
