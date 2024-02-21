@@ -23,7 +23,7 @@ class HerosController < ApplicationController
 
   def create
     @hero = Hero.new(hero_params)
-    @heroe.user = current_user(device)
+    @hero.user = current_user(device)
     if @hero.save
     redirect_to heros_path(@hero)
     else
