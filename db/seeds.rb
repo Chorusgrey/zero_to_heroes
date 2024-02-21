@@ -123,10 +123,6 @@ file_superman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v170
 superman.photos.attach(io: file_superman, filename: "nes.png", content_type: "image/png")
 superman.save
 
-file_batman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708275023/batman%202.jpg")
-batman.photos.attach(io: file_batman, filename: "nes.png", content_type: "image/png")
-batman.save
-
 file_wonderwoman = URI.open("https://res.cloudinary.com/dintkm0ed/image/upload/v1708103386/wonder%20woman.jpg")
 wonder_woman.photos.attach(io: file_wonderwoman, filename: "nes.png", content_type: "image/png")
 wonder_woman.save
