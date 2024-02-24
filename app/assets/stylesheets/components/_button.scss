@@ -1,5 +1,5 @@
 .button {
-  background-color: #9F001B;
+  background-color: #F48B07;
   color: white;
   position: relative;
   border-radius: 6px;
@@ -9,9 +9,13 @@
   text-decoration: none;
   text-align: center;
   padding: 4px 0;
+  &:hover {
+    background-color: #DD1D5E;
+    color: white;
+  }
 }
 .button-banner {
-  background-color: #9F001B;
+  background-color: #F48B07;
   color: white;
   position: relative;
   border-radius: 6px;
@@ -21,6 +25,10 @@
   text-decoration: none;
   text-align: center;
   padding: 4px 0;
+  &:hover {
+    background-color: #DD1D5E;
+    color: white;
+  }
 }
 .formulaire-button {
   background-color: #9F001B;
