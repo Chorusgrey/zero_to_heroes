@@ -3,9 +3,11 @@
   justify-content: space-between;
   height: 60px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  z-index: 2;
+  z-index: 1;
   position: fixed;
   width: 100%;
+  border: 3px solid black;
+  margin-top: 0;
 }
 
 .search-form {
@@ -13,10 +15,12 @@
   align-items: center;
   gap: 8px;
   margin-top: 8px;
+
 }
 
 .form-control {
   position: center;
+
 }
 
 .navbar-nav {
@@ -32,7 +36,7 @@
 
 .navbar-lewagon .nav-link:hover,
 .navbar-lewagon .navbar-brand:hover {
-  color: #CFAD55 !important; /* Exemple de couleur de survol */
+  color: #F68B1D !important; /* Exemple de couleur de survol */
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -44,7 +48,7 @@
 }
 
 .avatar {
-  border: 4px solid #CFAD55 !important;
+  border: 4px solid #F68B1D !important;
 }
 
 .btn-danger {
@@ -53,12 +57,12 @@
   border: none;
 
   &:hover {
-    background-color: #DD1D5E;
+    background-color: #F68B1D;
     color: white;
   }
 }
 
 .logo > img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
