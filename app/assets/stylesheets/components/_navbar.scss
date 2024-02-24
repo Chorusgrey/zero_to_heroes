@@ -1,6 +1,9 @@
 .navbar-lewagon {
   background: #004672;
   justify-content: space-between;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
 }
 
 .search-form {
@@ -51,4 +54,9 @@
     background-color: #6B0012;
     color: white;
   }
+}
+
+.logo > img {
+  width: 80px;
+  height: 80px;
 }
