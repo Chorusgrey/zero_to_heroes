@@ -1,40 +1,49 @@
+@import url('https://fonts.cdnfonts.com/css/international-super-hero');
+
 .button {
-  background-color: #F48B07;
-  color: white;
-  position: relative;
-  border-radius: 6px;
+  background-color: #FAD858;
+  color: black;
   margin-left: 8px;
   margin-bottom: 6px;
   width: 110px;
   text-decoration: none;
   text-align: center;
-  padding: 4px 0;
-  &:hover {
-    background-color: #DD1D5E;
-    color: white;
-  }
+  padding: 5px 2px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  position:relative;
+  float: right;
+  font-family: 'International Super Hero Light', sans-serif;
+  // &:hover {
+  //   background-color: #DD1D5E;
+  //   color: white;
+  // }
 }
 .button-banner {
-  background-color: #F48B07;
-  color: white;
+  background-color: #FAD858;
+  color: black;
   position: relative;
-  border-radius: 6px;
   margin-left: 0;
   margin-bottom: 16px;
   width: 110px;
   text-decoration: none;
   text-align: center;
   padding: 4px 0;
-  &:hover {
-    background-color: #DD1D5E;
-    color: white;
-  }
+  border-bottom: 6px solid black;
+  border-right: 6px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  // &:hover {
+  //   background-color: #DD1D5E;
+  //   color: white;
+  // }
 }
 .formulaire-button {
   background-color: #9F001B;
   color: white;
   position: relative;
-  border-radius: 6px;
   margin-left: 110px;
   margin-bottom: 12px;
   margin-top: 12px;
