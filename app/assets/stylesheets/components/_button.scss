@@ -45,10 +45,11 @@
   }
 }
 .formulaire-button {
-  background-color: #9F001B;
-  color: white;
+  background-color: #FAD858;
+  color: black;
   position: relative;
-  margin-left: 110px;
+  margin-left: 70px;
+  margin-right: 70px;
   margin-bottom: 12px;
   margin-top: 12px;
   width: 120px;
@@ -57,6 +58,10 @@
   padding: 4px 0;
   display: flex;
   justify-content: center;
+  &:hover {
+    background-color: #F68B1D;
+    color: black;
+  }
 }
 .button-titre {
   background-color: white;
