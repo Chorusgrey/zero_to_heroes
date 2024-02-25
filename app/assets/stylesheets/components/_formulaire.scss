@@ -14,7 +14,6 @@
   margin-right: 16px;
   font-size: 1.4rem;
 }
-
 .form-control-new {
   width: 100%;
   height: 50px;
@@ -25,4 +24,10 @@
   padding-left: 16px;
   margin-right: 16px;
   font-size: 1.4rem;
+}
+.footer-signup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 35%;
 }
