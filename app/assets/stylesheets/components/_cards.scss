@@ -50,14 +50,14 @@
   display: flex;
   flex-direction: column;
   padding-top: 16px;
-  display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   padding: 8px;
   border: 3px solid black;
   background-color: #96D8EC;
   color: #333;
-  width: 450px;
+  width: 550px;
   font-size: 1.2rem;
   font-family: 'International Super Hero', sans-serif;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);

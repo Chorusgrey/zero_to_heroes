@@ -47,17 +47,16 @@
 .formulaire-button {
   background-color: #FAD858;
   color: black;
-  position: relative;
-  margin-left: 70px;
-  margin-right: 70px;
   margin-bottom: 12px;
   margin-top: 12px;
-  width: 120px;
   text-decoration: none;
   text-align: center;
   padding: 4px 0;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  border-bottom: 6px solid black;
+  border-right: 6px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
   &:hover {
     background-color: #F68B1D;
     color: black;

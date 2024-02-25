@@ -1,25 +1,25 @@
 <%= form_with model: @hero, local: true do |form| %>
-<div class="mb-3">
+<div class="formulaire-new">
   <%= form.label "Nom", class: "form-label" %>
-  <%= form.text_field :name, class: "form-control" %>
+  <%= form.text_field :name, class: "form-control-new" %>
 </div>
-<div class="mb-3">
+<div class="formulaire-new">
   <%= form.label :description, class: "form-label" %>
-  <%= form.text_area :description, class: "form-control" %>
+  <%= form.text_area :description, class: "form-control-new" %>
 </div>
-<div class="mb-3">
+<div class="formulaire-new">
   <%= form.label "Prix par jour", class: "form-label" %>
-  <%= form.number_field :price_per_day, class: "form-control" %>
+  <%= form.number_field :price_per_day, class: "form-control-new" %>
 </div>
-<div class="mb-3">
+<div class="formulaire-new">
   <%= form.label "Nom de la ville", class: "form-label" %>
-  <%= form.text_field :address, class: "form-control" %>
+  <%= form.text_field :address, class: "form-control-new" %>
 </div>
-<div class="mb-3">
+<div class="formulaire-new">
   <%= form.label :photos, class: "form-label" %>
   <%= form.file_field :photos, multiple: true, class: "form-control" %>
 </div>
-<br><div class="mb-3">
+<br><div class="formulaire-new">
   <%= form.submit "Ajouter", class:"formulaire-button" %>
 </div>
 <% end %>
