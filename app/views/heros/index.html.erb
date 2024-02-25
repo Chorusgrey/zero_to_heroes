@@ -1,5 +1,6 @@
-<div style="margin-top: 150px;">
+<div style="margin-top: 100px;">
     <div class="container">
+      <h3 class="titre-index"><%= @heros.count%> Super-Héros à proximité</h3>
       <div class="cards-index">
         <% @heros.each do |hero| %>
           <div class="card">
@@ -9,8 +10,7 @@
                 </div>
                 <span class="button"><%= hero.price_per_day%>€ par jour</span>
                 <span class="button-titre"><%= hero.name%></span>
-                </div>
-                <% end %>
-              </div>
+            </div>
+            <% end %>
       </div>
-    </div>
+</div>
