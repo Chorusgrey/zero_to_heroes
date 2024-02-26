@@ -52,10 +52,8 @@
   text-decoration: none;
   text-align: center;
   padding: 4px 0;
-  border-bottom: 6px solid black;
-  border-right: 6px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
   font-size: 1.5rem;
   &:hover {
     background-color: #F68B1D;
@@ -75,6 +73,8 @@
   border-right: 6px solid black;
   border-top: 2px solid black;
   border-left: 2px solid black;
+  // border: 3px solid black;
+  // box-shadow: 3px 3px 2px 0px #000000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -95,10 +95,12 @@
   border-right: 2px solid black;
   border-top: 2px solid black;
   border-left: 2px solid black;
+  // border: 2px solid black;
   position: absolute;
   top: 210px; left: -5px;
   font-family: 'International Super Hero Light', sans-serif;
   font-size: 1.3rem;
+  // box-shadow: 3px 3px 2px 0px #000000;
 }
 .button-titre-show {
   background-color: white;

@@ -25,3 +25,16 @@ align-items: center;
   width: 100%;
   height: 300px;
 }
+
+.avatar-dashboard {
+  display: flex;
+
+    .rounded-circle {
+    top: 30px;
+    left: 35px;
+    position: center;
+    margin: 20px;
+    border: 4px solid black;
+    box-shadow: 5px 5px 4px 0px #777777;
+  }
+}
