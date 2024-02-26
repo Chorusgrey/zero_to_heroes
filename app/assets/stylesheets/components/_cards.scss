@@ -19,6 +19,10 @@
   display: flex;
   justify-content: center;
 }
+.container-show {
+  display: flex;
+  justify-content: center;
+}
 .start {
   justify-content: start;
 }
@@ -35,15 +39,64 @@
   background-image: url("app/assets/images/cloud-cards.png");
   position: relative;
 }
+.card-show-left {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 40%;
+  min-width: 250px;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin-left: 0;
+  padding: 16px;
+  margin-right: 16px;
+}
+.card-show-right {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 250px;
+  background-color: #F9EFE8;
+  position: relative;
+  margin-left: 0;
+}
+.card-show-right-top {
+  border: 3px solid black;
+  background-color: white;
+  height: 70%;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.card-show-right-bottom {
+  border: 3px solid black;
+  background-color: white;
+  height: 70%;
+  margin-top: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
 .card-footer {
   display: flex;
   justify-content: end;
   align-items: center;
   padding: 8px;
-  border-radius: 0 0 8px 8px;
+  padding-right: 16px;
+  background-color: #96D8EC;
+  border: 3px solid black;
+  padding-bottom: 16px;
+}
+.card-footer-show {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
   padding-right: 16px;
   border: 0;
   background-color: #96D8EC;
+  width: 100%;
+  border: 3px solid black;
 
 }
 .card-new {
@@ -62,20 +115,20 @@
   font-family: 'International Super Hero', sans-serif;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
-.card-show {
-  display: flex;
-  padding-top: 16px;
-  margin-top: 16px;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #333;
-  width: 100%;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-}
+// .card-show {
+//   display: flex;
+//   padding-top: 16px;
+//   margin-top: 16px;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 8px;
+//   border-radius: 8px;
+//   background-color: #fff;
+//   color: #333;
+//   width: 100%;
+//   font-size: 1.2rem;
+//   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+// }
 
 
 // Smallest device

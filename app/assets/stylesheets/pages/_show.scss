@@ -1,8 +1,8 @@
-.show-hero {
+
   .card-category {
   background-size: cover;
   background-position: center top;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,23 +10,25 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 10px;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  border: 3px solid black;
   }
 
   .cards-show {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 16px;
   }
   .calendar {
-    width: 400px;
+    width: 80%;
     margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    // background-color: #96D8EC;
     padding: 20px;
+    // border: 3px solid black;
+  }
+  .color-blue {
+    background-color: #96D8EC;
+    border: 3px solid black;
   }
   .calendar h2 {
     text-align: center;
@@ -48,53 +50,17 @@
     margin-bottom: 15px;
   }
   .calendar input[type="submit"] {
-    padding: 10px;
-    background-color: #9F001B;
-    color: #fff;
+
+    // background-color: #FAD858;
+    color: black;
     position: relative;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.6rem;
+    // cursor: pointer;
+    // transition: background-color 0.3s ease;
+    font-family: 'International Super Hero Light', sans-serif;
+    // &:hover {
+    //   background-color: #F68B1D;
+    //   color: black;
+    // }
   }
-  .calendar input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-
-  .body {
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff; /* Set background color to white */
-  font-family: Arial, sans-serif;
-  }
-  .row {
-    width: 100%;
-  }
-  .container-fluid {
-  width: 1000px;
-  max-width: 1500px; /* Set maximum width for the content */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add padding for space between content and container */
-  }
-
-
-  .bouton-checkup {
-    padding: 10px;
-    background-color: #9F001B;
-    color: #fff;
-    position: relative;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .image-left-show {
-    padding-right: 12px;
-    padding: 0;
-  }
-  .image-right-show {
-    padding-left: 70px;
-  }
-
-}
