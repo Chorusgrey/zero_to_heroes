@@ -18,17 +18,22 @@
           <li class="nav-item">
             <%= link_to "Super Héros", heros_path, class: "nav-link" %>
           </li>
+
+          <% if controller_name == 'heros' && action_name == 'index' ||
+                controller_name == 'heros' && action_name == 'show' ||
+                controller_name == 'pages' && action_name == 'dashboard' %>
           <li class="nav-item active ms-auto search-form">
             <%= simple_form_for :search, url: search_heros_path, method: :get, html: { class: 'search-form' } do |f| %>
               <%= f.input :query, label: false, placeholder: 'Rechercher des héros', input_html: { class: 'form-contro' } %>
               <%= f.submit 'Rechercher', class: 'btn btn-danger', style: 'margin-bottom: 18px;' %>
             <% end %>
           </li>
+          <% end %>
 
 
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, style: "margin-left: 10px;" %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, style: "margin-left: 10px;" %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
               <%= link_to "Ajouter un Héro", new_hero_path, class: "dropdown-item" %>

@@ -1,58 +1,55 @@
 
-<div class="show-hero">
-  <div class="container">
-    <div class="body">
-    <div class="container-fluid">
-      <div class="row">
-        <h1 class="fw-bold"><%=@hero.name %></h1>
-        <div class="col-sm-6 bg-white rounded text-center image-left-show">
-          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos.first.key, :crop => "fill") %>')"></div>
-          <div class="cards-show">
+<div style="margin-top: 80px;">
+    <div class="container-show">
+      <div class="card-show-left">
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos.first.key, :crop => "fill") %>')"></div>
+            <div class="cards-show">
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[1].key) %>')"></div>
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[2].key) %>')"></div>
             <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[3].key) %>')"></div>
-          </div>
-        </div>
 
-        <div class="col-sm-6 bg-white p-6 rounded text-center image-right-show">
-          <div class="calendar">
-            <h5 class="fw-bold">Louer votre Super Héros</h5>
-          <div data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
-          <%= simple_form_for([@hero, @booking]) do |f| %>
-          <%= f.input :start_date, :label => "Date de début",
-              as: :string,
-              input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
-              <%= f.input :end_date, :label => "Date de fin",
-              as: :string,
-              input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
-              <div data-price-calculation-target="totalPrice"></div>
-              <div data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <%= f.button :submit, "Réserver", class: "bouton-checkup" %>
-              </div>
-              <% end %>
           </div>
+        <div class ="card-footer-show">
+        <span class="button-titre-show"><%=@hero.name %></span>
+        <div class="rectangle-show">
+          <p class="text-show">Ce super-héros incarne l'essence de la bravoure et de l'innovation, fusionnant habilement force, intelligence et détermination pour combattre l'injustice sous toutes ses formes. Équipé d'un costume distinctif conçu pour optimiser ses capacités uniques,
+          il navigue à travers les défis avec une agilité et une précision exceptionnelles. Son arsenal, riche en gadgets avancés et en technologies personnalisées, lui confère un avantage tactique dans les situations les plus périlleuses.</p>
         </div>
+          <span class="button-show"><%= @hero.price_per_day%>€ par jour</span>
+            </div>
+          </div>
+
+
+
+  <div class="card-show-right" data-controller="price-calculation">
+    <div class="card-show-right-top">
+    <div class="calendar">
+      <p class="titre-formulaire-show">Louer votre Super Héros</p>
+      <div class="color-blue">
+        <div class="formulaire-new" data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
+        <%= simple_form_for([@hero, @booking]) do |f| %>
+        <%= f.input :start_date, :label => "Date de début",
+          as: :string,
+          input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
+          <%= f.input :end_date, :label => "Date de fin",
+                      as: :string,
+          input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
+          <div data-price-calculation-target="totalPrice" style="text-align:center;"></div>
+          <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+          </div>
+          </div>
+          </div>
+          <div class="formulaire-button"><%= f.button :submit, "Réserver"%></div>
       </div>
     </div>
-
-<div class="container-fluid py-5">
-  <div class="row">
-    <div class="col-sm-6 bg-white rounded text-left image-left-show bg-white rounded">
-      <h5 class="fw-bold hd"><%= @hero.description %></h5><br>
-      <p class="text-show">Ce super-héros incarne l'essence de la bravoure et de l'innovation, fusionnant habilement force, intelligence et détermination pour combattre l'injustice sous toutes ses formes. Équipé d'un costume distinctif conçu pour optimiser ses capacités uniques,
-        il navigue à travers les défis avec une agilité et une précision exceptionnelles. Son arsenal, riche en gadgets avancés et en technologies personnalisées, lui confère un avantage tactique dans les situations les plus périlleuses. Doté d'une résilience remarquable et d'un esprit stratégique, il utilise ses compétences non seulement pour vaincre les menaces, mais aussi pour inspirer et protéger sa communauté. Sa présence est un symbole de sécurité et d'espoir, rappelant à chacun que, malgré les ténèbres, la lumière de l'héroïsme brille toujours avec force. Son engagement inébranlable envers la justice fait de lui un allié précieux et un défenseur infatigable du bien.</p>
-      <p class="text-left">Prix par jour: <%= @hero.price_per_day %> Euros</p>
+    <div class="card-show-right-bottom">
+          <div class="map">
+            <div style="width: 100%; height: 250px;"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          </div>
+      <% end %>
+      </div>
     </div>
-    <div class="col-sm-6 bg-white rounded text-left  image-right-show bg-white rounded">
-      <h3 class="fw-bold">Où est ton Super Héros ?</h3>
-      <div style="width: 100%; height: 250px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-  </div>
 </div>
