@@ -35,9 +35,9 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, style: "margin-left: 10px;" %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
-              <%= link_to "Ajouter un Héro", new_hero_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Dashboard", dashboard_path, class: "dropdown-item", id:"dashboard-hover" %>
+              <%= link_to "Ajouter un Héro", new_hero_path, class: "dropdown-item", id:"dashboard-hover"  %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", id:"dashboard-hover", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
