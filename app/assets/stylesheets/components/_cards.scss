@@ -32,9 +32,15 @@
   padding: 0;
   background-color: #96D8EC;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  cursor: pointer;
   background-image: url("app/assets/images/cloud-cards.png");
   position: relative;
+  transition: transform 0.3s ease;
 }
+.card:hover {
+  transform: scale(1.05);
+}
+
 .card-footer {
   display: flex;
   justify-content: end;

@@ -1,16 +1,18 @@
 <div style="margin-top: 100px;">
     <div class="container">
       <h3 class="titre-index"><%= @heros.count%> Super-Héros à proximité</h3>
-      <div class="cards-index">
-        <% @heros.each do |hero| %>
-          <div class="card">
-            <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
-                <div class="cloud-cards">
-                  <p class="text"><%= hero.description %></p>
-                </div>
-                <span class="button"><%= hero.price_per_day%>€ par jour</span>
-                <span class="button-titre"><%= hero.name%></span>
+      <div class="cards">
+      <% @heros.each do |hero| %>
+        <div class="card">
+        <%= link_to hero_path(hero) do %>
+          <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
+              <div class="cloud-cards">
+                <p class="text"><%= hero.description %></p>
+              </div>
+              <span class="button"><%= hero.price_per_day%>€ par jour</span>
+              <span class="button-titre"><%= hero.name%></span>
+              </div>
+              <% end %>
+              <% end %>
             </div>
-            <% end %>
-      </div>
-</div>
+    </div>
