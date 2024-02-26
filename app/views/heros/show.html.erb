@@ -14,10 +14,10 @@
         <div class="rectangle-show">
           <p class="text-show">Ce super-héros incarne l'essence de la bravoure et de l'innovation, fusionnant habilement force, intelligence et détermination pour combattre l'injustice sous toutes ses formes. Équipé d'un costume distinctif conçu pour optimiser ses capacités uniques,
           il navigue à travers les défis avec une agilité et une précision exceptionnelles. Son arsenal, riche en gadgets avancés et en technologies personnalisées, lui confère un avantage tactique dans les situations les plus périlleuses.</p>
+        <span class="button-show"><%= @hero.price_per_day%>€ par jour</span>
         </div>
-          <span class="button-show"><%= @hero.price_per_day%>€ par jour</span>
-            </div>
-          </div>
+        </div>
+    </div>
 
 
 
@@ -39,12 +39,12 @@
           </div>
           </div>
           </div>
-          <div class="formulaire-button"><%= f.button :submit, "Réserver"%></div>
+          <div class="formulaire-button"><%= f.button :submit, "Reserver"%></div>
       </div>
     </div>
     <div class="card-show-right-bottom">
           <div class="map">
-            <div style="width: 100%; height: 250px;"
+            <div style="width: 100%; height: 360px;"
             data-controller="map"
             data-map-markers-value="<%= @markers.to_json %>"
             data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
