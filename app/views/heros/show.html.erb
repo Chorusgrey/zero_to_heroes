@@ -1,18 +1,16 @@
 
 <div class="show-hero">
   <div class="container">
-    <div class="card-show">
-    <% @hero_photo_url = cl_image_path(@hero.photos.first.key) %>
     <div class="body">
     <div class="container-fluid">
       <div class="row">
         <h1 class="fw-bold"><%=@hero.name %></h1>
         <div class="col-sm-6 bg-white rounded text-center image-left-show">
-          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+          <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos.first.key, :crop => "fill") %>')"></div>
           <div class="cards-show">
-            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
-            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
-            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= @hero_photo_url %>')"></div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[1].key) %>')"></div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[2].key) %>')"></div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(500, 500, 500,0.1), rgba(500, 500, 500,0.1)), url('<%= cl_image_path(@hero.photos[3].key) %>')"></div>
           </div>
         </div>
 

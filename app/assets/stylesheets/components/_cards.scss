@@ -36,7 +36,12 @@
   background-image: url("app/assets/images/cloud-cards.png");
   position: relative;
   transition: transform 0.3s ease;
+
+  a {
+    text-decoration: none;
+  }
 }
+
 .card:hover {
   transform: scale(1.05);
 }
