@@ -1,39 +1,36 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="onglet"
+
 export default class extends Controller {
-  static targets = [ "reservations", "heros" ];
+  static targets = [ "reservations", "heros", "booked" ];
 
   connect() {
     console .log('connected');
   }
 
-  switch (key) {
-    const reservations = document.querySelector('.list-reservation');
-    const heros = document.querySelector('.list-heros');
-
-    if (reservations.classList.contains('unvisible')) {
-      console.log('1');
-      reservations.classList.remove('unvisible');
-      reservations.classList.add('visible');
-      heros.classList.add('unvisible');
-    } else {
-      console.log('2');
-      reservations.classList.add('unvisible');
-      reservations.classList.remove('visible');
-      heros.classList.remove('unvisible');
-    }
-
-    if (heros.classList.contains('unvisible')) {
-      console.log('3');
-      heros.classList.remove('visible');
-      reservations.classList.remove('unvisible');
-    } else {
-      console.log('4');
-      heros.classList.remove('unvisible');
-      reservations.classList.add('visible');
-    }
-    // this.herosTarget.classList.toggle('unvisible');
+  reservations (event) {
+    console.log(this.reservationsTarget)
+    this.reservationsTarget.classList.add('visible')
+    this.reservationsTarget.classList.remove('unvisible')
+    this.herosTarget.classList.add('unvisible');
+    this.herostarget.classList.remove('visible');
+    this.bookedTarget.classList.add('unvisible');
+    this.bookedTarget.classList.remove('visible');
   }
-
+  heros (event) {
+    this.reservationsTarget.classList.add('unvisible')
+    this.reservationsTarget.classList.remove('visible')
+    this.herosTarget.classList.add('visible');
+    this.herosTarget.classList.remove('unvisible');
+    this.bookedTarget.classList.add('unvisible');
+    this.bookedTarget.classList.remove('visible');
+  }
+  booked (event) {
+    this.reservationsTarget.classList.add('unvisible')
+    this.reservationsTarget.classList.remove('visible')
+    this.herosTarget.classList.add('unvisible');
+    this.herosTarget.classList.remove('visible');
+    this.bookedTarget.classList.add('visible');
+    this.bookedTarget.classList.remove('unvisible');
+  }
 }

@@ -1,26 +1,26 @@
 
 <div class="banner mb-3">
-    <h1>VOTRE SUPER HEROS FAVORI</h1>
+  <h1>VOTRE SUPER HEROS FAVORI</h1>
     <h1>A COTE DE CHEZ VOUS !</h1>
       <p class="formulaire">
         <%= form_tag "/heros", method: "GET" do %>
         <%= text_field_tag :search_by_address, params[:search_by_address], placeholder: "Nom de votre ville", class:"input-banner" %>
         <%= submit_tag "Rechercher", class: "button-banner" %>
-  <% end %></p>
+        <% end %></p>
 </div>
 <div class="container">
-    <div class="cards">
-      <% @heros.sample(3).each do |hero| %>
-        <div class="card">
-        <%= link_to hero_path(hero) do %>
-          <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
-              <div class="cloud-cards">
-                <p class="text"><%= hero.description %></p>
-              </div>
-              <span class="button"><%= hero.price_per_day%>€ par jour</span>
-              <span class="button-titre"><%= hero.name%></span>
-              </div>
-              <% end %>
-              <% end %>
-            </div>
-    </div>
+  <div class="cards">
+    <% @heros.sample(3).each do |hero| %>
+      <div class="card">
+      <%= link_to hero_path(hero) do %>
+        <%= hero.photos.attached? ? cl_image_tag(hero.photos.first&.key, alt: "#{hero.name}", class:"movie-image") : image_tag("superhero.jpg")%>
+          <div class="cloud-cards">
+            <p class="text"><%= hero.description %></p>
+          </div>
+            <span class="button"><%= hero.price_per_day%>€ par jour</span>
+            <span class="button-titre"><%= hero.name%></span>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
