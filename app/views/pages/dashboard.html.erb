@@ -1,66 +1,72 @@
-<div class="profil-page">
-
-<div class="container-fluid">
-  <div class="row align-items-center">
-    <div class="col-md-4">
-      <%= image_tag @current_user.photo.url, class: "round-circle" %>
-    </div>
-    <div class="col-md-8">
-      <h1>Welcome <%= @current_user.first_name %> </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptates consequatur cum doloremque neque harum non alias! Aliquid culpa repellendus ducimus, ullam facilis saepe magnam, id laborum, voluptas fuga ratione.</p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
+<div style="margin-top: 80px;">
 <div class="container">
-<div class="row align-items-center">
-<div class="col-md-12">
-
-<h3>Location de super héros en cours</h3>
-        <% @bookings_as_tenant.each do |booking| %>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                  <%= cl_image_tag(booking.hero.photos.first&.key, class:"movie-image") %>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><%= booking.hero.name %></h5>
-                  <p class="card-text"><%= booking.hero.description %></p>
-                  <p class="card-price"><small class="text-muted"> Prix total : <strong class="price"><%= booking.total_price %> €</strong></small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
 
 
-<h3>Mes super héros que je propose à louer</h3>
-      <% @heros_for_rent.each do |hero| %>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                  <%= cl_image_tag(hero.photos.first&.key, class:"movie-image") %>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><%= hero.name %></h5>
-                  <p class="card-text"><%= hero.description %></p>
-                  <p class="card-price"><small class="text-muted"> Prix par jour : <strong class="price"><%= hero.price_per_day %> €</strong></small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
+<div class="card-dashboard">
+  <div class="dashboard-top">
+    <div class="avatar-dashboard">
+      <%= image_tag @current_user.photo.url, class: "rounded-circle" %>
     </div>
+    <div>
+      <h1 class="welcome">Bienvenue <%= @current_user.first_name %> </h1>
+      <%# <p class="text-dashboard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptates consequatur cum doloremque neque harum non alias! Aliquid culpa repellendus ducimus, ullam facilis saepe magnam, id laborum, voluptas fuga ratione.</p> %>
+    </div>
+  </div>
+  <div class="litle-case">
+    Nombre de réservation : <%= @bookings_as_tenant.count %>
   </div>
 </div>
 
+<div class="onglet" data-controller="onglet">
+  <button class="button-dashboard" data-action="click->onglet#switch">Mes réservations</button>
+  <button class="button-dashboard" data-action="click->onglet#switch">Mes Super Héros à louer</button>
+</div>
 
+
+
+<div class="list-reservation cards visible" data-onglet-target="reservations">
+  <h3>Mes réservations</h3>
+    <% @bookings_as_tenant.each do |booking| %>
+      <div class="card-product">
+
+        <%= cl_image_tag(booking.hero.photos.first&.key, class:"card-img") %>
+
+        <div class="card-product-infos">
+          <h5><%= booking.hero.name %></h5>
+          <p><%= booking.hero.description %></p>
+
+          <p class="dates">Dates : <%= I18n.l(booking.start_date, format: "%d %B %Y") %> ➔ <%= I18n.l(booking.end_date, format: "%d %B %Y") %></p>
+
+          <p class="price">Prix total : <strong> <%=  booking.total_price %> €</strong></p>
+        </div>
+
+      </div>
+    <% end %>
+
+</div>
+
+
+
+
+<div class="list-heros cards unvisible" data-onglet-target="heros">
+  <h3>Mes Super Héros à louer</h3>
+    <% @heros_for_rent.each do |hero| %>
+      <div class="card-product">
+
+        <%= cl_image_tag(hero.photos.first&.key, class:"movie-image") %>
+
+        <div class="card-product-infos">
+          <h5><%= hero.name %></h5>
+          <p><%= hero.description %></p>
+          <p class="price">Prix par jour : <strong> <%= hero.price_per_day %> €</strong></p>
+        </div>
+
+      </div>
+    <% end %>
+
+</div>
+
+
+
+  </div>
 </div>
