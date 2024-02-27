@@ -41,6 +41,81 @@
   position: relative;
   transition: transform 0.3s ease;
 }
+
+.card-product {
+  overflow: hidden;
+  height: 258px;
+  width: 95%;
+  background: white;
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
+  background-color: #96D8EC;
+  font-family: 'International Super Hero', sans-serif;
+  margin-bottom: 18px;
+
+  img {
+    max-width: 320px;
+    height: 100%;
+    object-fit: center;
+    border-right: 3px solid black;
+  };
+
+  h5 {
+    font-family: 'International Super Hero', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    color: white;
+    text-shadow: rgb(0, 1, 1) 2px 0px 0px, rgb(0, 1, 1) 1.75517px 0.958851px 0px, rgb(0, 1, 1) 1.0806px 1.68294px 0px, rgb(0, 1, 1) 0.141474px 1.99499px 0px, rgb(0, 1, 1) -0.832294px 1.81859px 0px, rgb(0, 1, 1) -1.60229px 1.19694px 0px, rgb(0, 1, 1) -1.97998px 0.28224px 0px, rgb(0, 1, 1) -1.87291px -0.701566px 0px, rgb(0, 1, 1) -1.30729px -1.5136px 0px, rgb(0, 1, 1) -0.421592px -1.95506px 0px, rgb(0, 1, 1) 0.567324px -1.91785px 0px, rgb(0, 1, 1) 1.41734px -1.41108px 0px, rgb(0, 1, 1) 1.92034px -0.558831px 0px;
+  }
+
+  p {
+    font-size: 30px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .dates {
+    font-size: 25px;
+    font-family: 'International Super Hero Light', sans-serif;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0px 0px #000000;
+    background-color: #FAD858;
+    width: 428px;
+    position: absolute;
+    right: -2px;
+    top: -34px;
+    padding: 4px;
+    opacity: 1;
+  }
+
+  .price {
+    width: 280px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    border: 3px solid black;
+    background-color: white;
+    padding: 4px;
+    box-shadow: 3px 3px 0px 0px #000000;
+    text-align: center;
+    align-self: flex-end;
+    opacity: 1;
+  }
+
+  .card-product-infos {
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
 .card-show-left {
   gap: 16px;
   display: flex;
@@ -153,15 +228,84 @@
     font-family: 'International Super Hero Light', sans-serif;
     color: black;
     border: 3px solid black;
+    box-shadow: 3px 3px 0px 0px #000000;
     background-color: #FAD858;
     width: 250px;
     position: absolute;
-    right: 23px;
+    right: 26px;
     top: 18px;
     padding: 4px;
   }
 }
 
+
+.list-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border: 3px solid black;
+  background-color: white;
+
+  h3 {
+    font-family: 'International Super Hero', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    color: white;
+    text-shadow: rgb(0, 1, 1) 2px 0px 0px, rgb(0, 1, 1) 1.75517px 0.958851px 0px, rgb(0, 1, 1) 1.0806px 1.68294px 0px, rgb(0, 1, 1) 0.141474px 1.99499px 0px, rgb(0, 1, 1) -0.832294px 1.81859px 0px, rgb(0, 1, 1) -1.60229px 1.19694px 0px, rgb(0, 1, 1) -1.97998px 0.28224px 0px, rgb(0, 1, 1) -1.87291px -0.701566px 0px, rgb(0, 1, 1) -1.30729px -1.5136px 0px, rgb(0, 1, 1) -0.421592px -1.95506px 0px, rgb(0, 1, 1) 0.567324px -1.91785px 0px, rgb(0, 1, 1) 1.41734px -1.41108px 0px, rgb(0, 1, 1) 1.92034px -0.558831px 0px;
+
+    margin: 18px;
+    width: 96%;
+    border: 3px solid black;
+    background-color: #F04D63;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0px 0px #000000;
+  }
+}
+
+.list-heros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border: 3px solid black;
+  background-color: white;
+
+  .card-product {
+    background-color: #C6FF9A;
+  }
+
+  h3 {
+    font-family: 'International Super Hero', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    color: white;
+    text-shadow: rgb(0, 1, 1) 2px 0px 0px, rgb(0, 1, 1) 1.75517px 0.958851px 0px, rgb(0, 1, 1) 1.0806px 1.68294px 0px, rgb(0, 1, 1) 0.141474px 1.99499px 0px, rgb(0, 1, 1) -0.832294px 1.81859px 0px, rgb(0, 1, 1) -1.60229px 1.19694px 0px, rgb(0, 1, 1) -1.97998px 0.28224px 0px, rgb(0, 1, 1) -1.87291px -0.701566px 0px, rgb(0, 1, 1) -1.30729px -1.5136px 0px, rgb(0, 1, 1) -0.421592px -1.95506px 0px, rgb(0, 1, 1) 0.567324px -1.91785px 0px, rgb(0, 1, 1) 1.41734px -1.41108px 0px, rgb(0, 1, 1) 1.92034px -0.558831px 0px;
+
+    margin: 18px;
+    width: 96%;
+    border: 3px solid black;
+    background-color: #F04D63;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0px 0px #000000;
+  }
+
+}
+
+  .visible {
+    display: flex;
+  }
+  .unvisible {
+    display: none;
+  }
 
 
 // Smallest device
