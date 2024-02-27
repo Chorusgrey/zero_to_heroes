@@ -10,10 +10,8 @@
   text-align: center;
   font-size: 1.1rem;
   padding: 5px 2px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
   position: absolute;
   bottom: 30px; right: 30px;
   font-family: 'International Super Hero Light', sans-serif;
@@ -33,10 +31,8 @@
   text-align: center;
   font-size: 1.1rem;
   padding: 5px 2px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
   position: absolute;
   bottom: 40px; right: 30px;
   font-family: 'International Super Hero Light', sans-serif;
@@ -87,16 +83,12 @@
   text-decoration: none;
   text-align: center;
   padding: 6px 6px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  // border: 2px solid black;
+  border: 3px solid black;
   position: absolute;
   top: 210px; left: -5px;
   font-family: 'International Super Hero Light', sans-serif;
   font-size: 1.3rem;
-  // box-shadow: 3px 3px 2px 0px #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
 }
 .button-titre-show {
   background-color: white;
@@ -107,12 +99,10 @@
   text-decoration: none;
   text-align: center;
   padding: 6px 6px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
   position: absolute;
-  top: 15px; left: 5px;
+  top: 16px; left: 8px;
   font-family: 'International Super Hero Light', sans-serif;
   font-size: 1.5rem;
 }
