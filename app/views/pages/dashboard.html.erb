@@ -1,5 +1,5 @@
 <div style="margin-top: 80px;">
-  <div class="container">
+  <div class="container" data-controller="onglet">
     <div class="card-dashboard">
       <div class="dashboard-top">
         <div class="avatar-dashboard">
@@ -13,7 +13,7 @@
         Nombre de réservation : <%= @bookings_as_tenant.count %>
       </div>
     </div>
-    <div class="onglet" data-controller="onglet">
+    <div class="onglet">
       <button class="button-dashboard" data-action="click->onglet#reservations">Mes réservations</button>
       <button class="button-dashboard" data-action="click->onglet#heros">Mes Super Héros à louer</button>
       <button class="button-dashboard" data-action="click->onglet#booked">Mes reservations passées</button>
