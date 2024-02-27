@@ -46,9 +46,9 @@ iron_man = Hero.create!(name: "Iron man", description: "Je suis un super garagis
 thor = Hero.create!(name: "Thor", description: "Je suis un super bricoleur, je manie super bien le marteau", address: "Lyon", available: true, price_per_day: 250, user: perrine)
 captain_america = Hero.create!(name: "Captain America", description: "Je suis un super guide pour les cours de musculation", address: "Paris", available: true, price_per_day: 150, user: perrine)
 hulk = Hero.create!(name: "Hulk", description: "Je suis un super guide pour les cours de Yoga", address: "Paris", available: true, price_per_day: 150, user: perrine)
-black_panther = Hero.create!(name: "Black Panther", description: "Je suis un super guide pour les cours de danse", address: "Paris", available: true, price_per_day: 150, user: karim)
-doctor_strange = Hero.create!(name: "Doctor Strange", description: "Je suis un super guide pour les cours de magie", address: "Paris", available: true, price_per_day: 150, user: karim)
-ant_man = Hero.create!(name: "Ant Man", description: "Je suis un super guide pour les cours de miniaturisation", address: "Paris", available: true, price_per_day: 150, user: karim)
+black_panther = Hero.create!(name: "Black Panther", description: "Je suis un super guide pour les cours de danse", address: "Paris", available: true, price_per_day: 150, user: perrine)
+doctor_strange = Hero.create!(name: "Doctor Strange", description: "Je suis un super guide pour les cours de magie", address: "Paris", available: true, price_per_day: 150, user: benoit)
+ant_man = Hero.create!(name: "Ant Man", description: "Je suis un super guide pour les cours de miniaturisation", address: "Paris", available: true, price_per_day: 150, user: dreni)
 wolverine = Hero.create!(name: "Wolverine", description: "Je suis un super guide pour les cours de survie en foret", address: "Chamonix", available: true, price_per_day: 150, user: coraline)
 
 puts "------------------------------------------------------------------------------------------------------"

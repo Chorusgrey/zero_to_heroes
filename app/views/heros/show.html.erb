@@ -22,18 +22,20 @@
         <div class="calendar">
           <p class="titre-formulaire-show">Louer votre Super Héros</p>
             <div class="color-blue">
-              <div class="formulaire-new" data-controller="price-calculation" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
-              <%= simple_form_for([@hero, @booking]) do |f| %>
-              <%= f.input :start_date, :label => "Date de début",
-                  as: :string,
-                input_html: { data: { price_calculation_target: "start_date", action: "price-calculation#calculate" } } %>
-              <%= f.input :end_date, :label => "Date de fin",
-                  as: :string,
-                  input_html: { data: { price_calculation_target: "end_date", action: "price-calculation#calculate" } } %>
-                <div data-price-calculation-target="totalPrice" style="text-align:center;"></div>
+              <div class="formulaire-new" data-price-calculation-price-per-day-value="<%= @hero.price_per_day %>" >
+                  <%= simple_form_for([@hero, @booking]) do |f| %>
+                    <%= f.input :start_date, :label => "Date de début",
+                        as: :string,
+                        input_html: { data: { price_calculation_target: "startDate", action: "price-calculation#calculate" } } %>
+                    <%= f.input :end_date, :label => "Date de fin",
+                        as: :string,
+                        input_html: { data: { price_calculation_target: "endDate", action: "price-calculation#calculate" } } %>
+                    <div data-price-calculation-target="totalPrice" style="text-align:center;"></div>
+
+                    <div><%= f.button :submit, "Reserver"%></div>
+                  <% end %>
               </div>
             </div>
-          <div class="formulaire-button"><%= f.button :submit, "Reserver"%></div>
       </div>
     </div>
     <div class="card-show-right-bottom">
@@ -43,7 +45,6 @@
               data-map-markers-value="<%= @markers.to_json %>"
               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
           </div>
-        <% end %>
       </div>
     </div>
   </div>

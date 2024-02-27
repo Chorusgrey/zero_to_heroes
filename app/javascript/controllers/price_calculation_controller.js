@@ -3,11 +3,11 @@ import flatpickr from "flatpickr";
 
 export default class extends Controller {
   static values = { pricePerDay: String }
-  static targets = ["start_date", "end_date", "totalPrice"]
+  static targets = ["startDate", "endDate", "totalPrice"]
 
   calculate() {
-    const startDate = this.start_dateTarget.value
-    const endDate = this.end_dateTarget.value
+    const startDate = this.startDateTarget.value
+    const endDate = this.endDateTarget.value
     const value = this.pricePerDayValue
     console.log(value);
     console.log(startDate);
@@ -28,7 +28,7 @@ export default class extends Controller {
 
   connect() {
     console.log(this.pricePerDayValue);
-    flatpickr(this.start_dateTarget, {});
-    flatpickr(this.end_dateTarget, {});
+    flatpickr(this.startDateTarget, {});
+    flatpickr(this.endDateTarget, {});
   }
 }
