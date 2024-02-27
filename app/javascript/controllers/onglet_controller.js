@@ -8,26 +8,20 @@ export default class extends Controller {
     console .log('connected');
   }
 
-  switch (key) {
-    const reservations = document.querySelector('.list-reservation');
-    const heros = document.querySelector('.list-heros');
+  reservations (event) {
 
-    if (reservations.classList.contains('unvisible')) {
-      reservations.classList.remove('unvisible');
-      reservations.classList.add('visible');
-      heros.classList.add('unvisible');
-    } else {
-      reservations.classList.add('unvisible');
-      reservations.classList.remove('visible');
-      heros.classList.remove('unvisible');
-    }
-    if (heros.classList.contains('unvisible')) {
-      heros.classList.remove('visible');
-      reservations.classList.remove('unvisible');
-    } else {
-      heros.classList.remove('unvisible');
-      reservations.classList.add('visible');
-    }
-    // this.herosTarget.classList.toggle('unvisible');
+    this.reservationsTarget.classList.add('visible')
+    this.herosTarget.classList.add('unvisible');
+    this.bookedTarget.classList.add('unvisible');
+  }
+  heros (event) {
+    this.reservationsTarget.classList.add('unvisible')
+    this.herosTarget.classList.add('visible');
+    this.bookedTarget.classList.add('unvisible');
+  }
+  booked (event) {
+    this.reservationsTarget.classList.add('unvisible')
+    this.herosTarget.classList.add('unvisible');
+    this.bookedTarget.classList.add('visible');
   }
 }

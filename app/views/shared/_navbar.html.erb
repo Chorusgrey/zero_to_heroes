@@ -2,35 +2,30 @@
     data-sticky-navbar-target="navbar"
     data-action="scroll@window->sticky-navbar#connect">
   <div class="container-fluid">
-  <div class="logo">
-    <%= link_to image_tag('icone.png'), root_path, :class => 'logo' %>
-  </div>
-
+    <div class="logo">
+      <%= link_to image_tag('icone.png'), root_path, :class => 'logo' %>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <%= link_to "Accueil", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Super Héros", heros_path, class: "nav-link" %>
-          </li>
-
+        <li class="nav-item active">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Super Héros", heros_path, class: "nav-link" %>
+        </li>
           <% if controller_name == 'heros' && action_name == 'index' ||
                 controller_name == 'heros' && action_name == 'show' ||
                 controller_name == 'pages' && action_name == 'dashboard' %>
-          <li class="nav-item active ms-auto search-form">
-            <%= simple_form_for :search, url: search_heros_path, method: :get, html: { class: 'search-form' } do |f| %>
-              <%= f.input :query, label: false, placeholder: 'Rechercher des héros', input_html: { class: 'form-contro' } %>
-              <%= f.submit 'Rechercher', class: 'btn btn-danger', style: 'margin-bottom: 18px;' %>
-            <% end %>
-          </li>
+        <li class="nav-item active ms-auto search-form">
+          <%= simple_form_for :search, url: search_heros_path, method: :get, html: { class: 'search-form' } do |f| %>
+            <%= f.input :query, label: false, placeholder: 'Rechercher des héros', input_html: { class: 'form-contro' } %>
+            <%= f.submit 'Rechercher', class: 'btn btn-danger', style: 'margin-bottom: 18px;' %>
           <% end %>
-
-
+        </li>
+        <% end %>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag current_user.photo.url, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, style: "margin-left: 10px;" %>
@@ -41,9 +36,7 @@
             </div>
           </li>
         <% else %>
-          <!--li class="nav-item"-->
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
         <% end %>
       </ul>
     </div>
