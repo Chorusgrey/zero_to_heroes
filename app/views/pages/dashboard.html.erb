@@ -20,6 +20,7 @@
 <div class="onglet" data-controller="onglet">
   <button class="button-dashboard" data-action="click->onglet#switch">Mes réservations</button>
   <button class="button-dashboard" data-action="click->onglet#switch">Mes Super Héros à louer</button>
+  <button class="button-dashboard" data-action="click->onglet#switch">Mes reservations passées</button>
 </div>
 
 
@@ -65,8 +66,23 @@
     <% end %>
 
 </div>
+<div class="list-booked cards unvisible" data-onglet-target="booked">
+  <h3>Mes réservations passées</h3>
+      <div class="card-product">
 
+        <%= cl_image_tag(Hero.last.photos.first&.key, class:"card-img") %>
 
+        <div class="card-product-infos">
+          <h5><%=Hero.last.name %></h5>
+          <p><%= Hero.last.description %></p>
 
+          <p class="dates"> Dates : 01 fevrier 2024 ➔ 02 fevrier 2024</p>
+
+          <p class="price">Prix total : 150 €</p>
+        </div>
+
+      </div>
+
+</div>
   </div>
 </div>
