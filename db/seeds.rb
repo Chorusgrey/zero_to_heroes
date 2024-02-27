@@ -34,9 +34,9 @@ puts "Creating heroes..."
 puts "------------------------------------------------------------------------------------------------------"
 puts "------------------------------------------------------------------------------------------------------"
 
-superman = Hero.create!(name: "Superman", description: "Je suis un super pilote pour le covoiturage", address: "Paris", available: true, price_per_day: 100, user: charlie)
+superman = Hero.create!(name: "Superman", description: "Je suis un super pour remplacer un avion", address: "Paris", available: true, price_per_day: 100, user: charlie)
 wonder_woman = Hero.create!(name: "Wonder Woman", description: "Super coach pour la remise en forme et la fonte du gras du ventre", address: "Paris", available: true, price_per_day: 150, user: gwendal)
-flash_gordon = Hero.create!(name: "Flash Gordon", description: "Livraison de tous vos colis en un temps record", address: "Lyon", available: true, price_per_day: 220, user: gwendal)
+flash_gordon = Hero.create!(name: "Flash Gordon", description: "Livraison de tous vos colis en un temps record", address: "Paris", available: true, price_per_day: 220, user: gwendal)
 aquaman = Hero.create!(name: "Aquaman", description: "Je suis un super guide pour la plongée sous-marine", address: "Marseille", available: true, price_per_day: 180, user: benoit)
 green_lantern = Hero.create!(name: "Green Lantern", description: "Je suis un super guide pour les randonnées en montagne", address: "Chamonix", available: true, price_per_day: 250, user: benoit)
 hawkeye = Hero.create!(name: "Hawkeye", description: "Je suis un super prof de Tir a l'arc", address: "Paris", available: true, price_per_day: 250, user: benoit)

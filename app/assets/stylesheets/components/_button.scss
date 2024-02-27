@@ -56,25 +56,25 @@
     color: black;
   }
 }
-// .formulaire-button {
-//   background-color: #FAD858;
-//   color: black;
-//   margin-bottom: 12px;
-//   margin-top: 12px;
-//   text-decoration: none;
-//   text-align: center;
-//   padding: 4px;
-//   padding-left: 12px;
-//   width: 100%;
-//   border: 3px solid black;
-//   box-shadow: 3px 3px 0px 0px #000000;
-//   cursor: pointer;
-//   transition: background-color 0.3s ease;
-//   &:hover {
-//     background-color: #F68B1D;
-//     color: black;
-//   }
-// }
+.formulaire-button {
+  background-color: #FAD858;
+  color: black;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  text-decoration: none;
+  text-align: center;
+  padding: 4px;
+  padding-left: 6px;
+  width: 100%;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px 0px #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #F68B1D;
+    color: black;
+  }
+}
 .button-titre {
   background-color: white;
   color: black;

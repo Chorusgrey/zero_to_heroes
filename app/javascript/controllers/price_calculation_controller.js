@@ -14,7 +14,7 @@ export default class extends Controller {
     console.log(end);
 
     const diffTime = Math.abs(new Date(end) - new Date(start));
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
     console.log(diffDays);
     const totalPrice = diffDays * value;
     console.log(totalPrice);
