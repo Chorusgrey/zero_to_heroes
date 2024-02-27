@@ -55,6 +55,7 @@
   text-align: center;
   padding-top: 36px;
   padding-bottom: 8px;
+  width: 90%;
 }
 
 .result {
@@ -86,6 +87,7 @@
   font-size: 1.4rem;
 }
 
+
 // .text-dashboard {
 //   font-family: 'International Super Hero Light', sans-serif;
 //   font-size: 28px;
@@ -98,3 +100,8 @@
 //   border-radius: 88px 88px 88px 103px / 75px 75px 75px 73px;
 //   box-shadow: 4px 4px 3px 0px #777777;
 // }
+
+#dashboard-hover {
+  background-color: #F4F4F4 !important;
+}
+

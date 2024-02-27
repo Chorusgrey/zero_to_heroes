@@ -10,20 +10,24 @@
   background-color: #F9EFE8;
 }
 .cloud-cards {
-background-image: asset-url("cloud-cards.png");
-width: 370px;
-height: 300px;
-padding-left: 16px;
-padding-right: 16px;
-display: flex;
-align-items: center;
+  background-image: asset-url("cloud-cards.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  max-width: 370px;
+  height: 300px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
 }
 .rectangle-show {
   background-image: asset-url("rectangle-show.png");
   background-repeat: no-repeat;
   background-size: contain;
+  align-items: center;
   width: 100%;
   height: 300px;
+  padding-top: 24px;
 }
 
 .avatar-dashboard {
